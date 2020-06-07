@@ -1,4 +1,4 @@
-package com.example.cuahangchondaydien;
+package com.example.cuahangchondaydien.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
@@ -8,6 +8,7 @@ import android.widget.ListView;
 import android.widget.Toolbar;
 import android.widget.ViewFlipper;
 
+import com.example.cuahangchondaydien.R;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
