@@ -1,8 +1,6 @@
 package com.example.cuahangchondaydien.activity;
 
-import android.media.Image;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -20,7 +18,6 @@ import com.example.cuahangchondaydien.R;
 import com.google.android.material.navigation.NavigationView;
 import com.squareup.picasso.Picasso;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -73,11 +70,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void Anhxa() {
-        toolbar = findViewById(R.id.toolbarmanhinhchinh);
-        viewFlipper = findViewById(R.id.viewlipper);
-        recyclerViewmanhinhchinh = findViewById(R.id.recyclerview);
-        navigationView = findViewById(R.id.recyclerview);
-        listViewmanhinhchinh = findViewById(R.id.listviewmanhinhchinh);
-        drawerLayout = findViewById(R.id.drawerlayout);
+        toolbar = (Toolbar) findViewById(R.id.toolbarmanhinhchinh);
+        viewFlipper = (ViewFlipper) findViewById(R.id.viewlipper);
+        recyclerViewmanhinhchinh = (RecyclerView) findViewById(R.id.recyclerview);
+        navigationView = (NavigationView) findViewById(R.id.recyclerview);
+        listViewmanhinhchinh = (ListView) findViewById(R.id.listviewmanhinhchinh);
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawerlayout);
     }
 }
