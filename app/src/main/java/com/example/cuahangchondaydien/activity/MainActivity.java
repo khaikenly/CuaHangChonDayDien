@@ -24,9 +24,9 @@ public class MainActivity extends AppCompatActivity {
 
     Toolbar toolbar;
     ViewFlipper viewFlipper;
-    RecyclerView recyclerViewmanhinhchinh;
+    RecyclerView recyclerview;
     NavigationView navigationView;
-    ListView listViewmanhinhchinh;
+    ListView listviewmanhinhchinh;
     DrawerLayout drawerLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,9 +72,9 @@ public class MainActivity extends AppCompatActivity {
     private void Anhxa() {
         toolbar = (Toolbar) findViewById(R.id.toolbarmanhinhchinh);
         viewFlipper = (ViewFlipper) findViewById(R.id.viewlipper);
-        recyclerViewmanhinhchinh = (RecyclerView) findViewById(R.id.recyclerview);
+        recyclerview = (RecyclerView) findViewById(R.id.recyclerview);
         navigationView = (NavigationView) findViewById(R.id.recyclerview);
-        listViewmanhinhchinh = (ListView) findViewById(R.id.listviewmanhinhchinh);
+        listviewmanhinhchinh = (ListView) findViewById(R.id.listviewmanhinhchinh);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerlayout);
     }
 }
