@@ -70,11 +70,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void Anhxa() {
-        toolbar = (Toolbar) findViewById(R.id.toolbarmanhinhchinh);
-        viewFlipper = (ViewFlipper) findViewById(R.id.viewlipper);
-        recyclerview = (RecyclerView) findViewById(R.id.recyclerview);
-        navigationView = (NavigationView) findViewById(R.id.recyclerview);
-        listviewmanhinhchinh = (ListView) findViewById(R.id.listviewmanhinhchinh);
-        drawerLayout = (DrawerLayout) findViewById(R.id.drawerlayout);
+        toolbar = findViewById(R.id.toolbarmanhinhchinh);
+        viewFlipper = findViewById(R.id.viewlipper);
+        recyclerview = findViewById(R.id.recyclerview);
+        navigationView = findViewById(R.id.navgationview);
+        listviewmanhinhchinh = findViewById(R.id.listviewmanhinhchinh);
+        drawerLayout = findViewById(R.id.drawerlayout);
     }
 }
