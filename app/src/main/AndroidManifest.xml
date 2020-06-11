@@ -14,6 +14,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".activity.ThongTinActivity"></activity>
+        <activity android:name=".activity.LienHeActivity" />
+        <activity android:name=".activity.CapDienActivity" />
+        <activity android:name=".activity.DayDienActivity" />
+
         <meta-data
             android:name="com.google.android.actions"
             android:resource="@xml/network_security_config" />

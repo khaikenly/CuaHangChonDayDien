@@ -1,9 +1,11 @@
 package com.example.cuahangchondaydien.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import androidx.appcompat.widget.Toolbar;
@@ -62,10 +64,68 @@ public class MainActivity extends AppCompatActivity {
             ActionViewFlipper();
             GetDuLieuLoaiSp();
             GetDuLieuSpMoiNhat();
+            CatchOnItemListView();
         }else {
             checkconnection.ShowToast_Short(getApplicationContext(),"Kiem tra ket noi internet");
             finish();
         }
+    }
+
+    private void CatchOnItemListView() {
+        listviewmanhinhchinh.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int i, long id) {
+                switch (i){
+                    case 0:
+                        if (checkconnection.haveNetworkConnection(getApplicationContext())){
+                            Intent intent = new Intent(MainActivity.this,MainActivity.class);
+                            startActivity(intent);
+                        }else{
+                            checkconnection.ShowToast_Short(getApplicationContext(),"Kiểm tra lại kết nối");
+                        }
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case 1:
+                        if (checkconnection.haveNetworkConnection(getApplicationContext())){
+                            Intent intent = new Intent(MainActivity.this,DayDienActivity.class);
+                            intent.putExtra("idloaisanpham",mangloaisp.get(i).getId());
+                            startActivity(intent);
+                        }else{
+                            checkconnection.ShowToast_Short(getApplicationContext(),"Kiểm tra lại kết nối");
+                        }
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case 2:
+                        if (checkconnection.haveNetworkConnection(getApplicationContext())){
+                            Intent intent = new Intent(MainActivity.this,CapDienActivity.class);
+                            intent.putExtra("idloaisanpham",mangloaisp.get(i).getId());
+                            startActivity(intent);
+                        }else{
+                            checkconnection.ShowToast_Short(getApplicationContext(),"Kiểm tra lại kết nối");
+                        }
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case 3:
+                        if (checkconnection.haveNetworkConnection(getApplicationContext())){
+                            Intent intent = new Intent(MainActivity.this,LienHeActivity.class);
+                            startActivity(intent);
+                        }else{
+                            checkconnection.ShowToast_Short(getApplicationContext(),"Kiểm tra lại kết nối");
+                        }
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case 4:
+                        if (checkconnection.haveNetworkConnection(getApplicationContext())){
+                            Intent intent = new Intent(MainActivity.this,ThongTinActivity.class);
+                            startActivity(intent);
+                        }else{
+                            checkconnection.ShowToast_Short(getApplicationContext(),"Kiểm tra lại kết nối");
+                        }
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                }
+            }
+        });
     }
 
     private void GetDuLieuSpMoiNhat() {
