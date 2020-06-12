@@ -186,6 +186,7 @@ public class DayDienActivity extends AppCompatActivity {
             super.handleMessage(msg);
         }
     }
+
     public class ThreadData extends Thread{
         @Override
         public void run() {
