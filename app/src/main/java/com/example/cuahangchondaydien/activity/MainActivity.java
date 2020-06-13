@@ -25,6 +25,7 @@ import com.android.volley.toolbox.Volley;
 import com.example.cuahangchondaydien.R;
 import com.example.cuahangchondaydien.adapter.SanPhamAdapter;
 import com.example.cuahangchondaydien.adapter.loaisanphamAdapter;
+import com.example.cuahangchondaydien.model.GioHang;
 import com.example.cuahangchondaydien.model.LoaiSanPham;
 import com.example.cuahangchondaydien.model.SanPham;
 import com.example.cuahangchondaydien.ultil.checkconnection;
@@ -53,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
     String hinhloaisanpham = "";
     ArrayList<SanPham> mangsanpham;
     SanPhamAdapter sanPhamAdapter;
+    public static ArrayList<GioHang> manggiohang;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -245,5 +247,10 @@ public class MainActivity extends AppCompatActivity {
         recyclerview.setHasFixedSize(true);
         recyclerview.setLayoutManager(new GridLayoutManager(getApplicationContext(),2));
         recyclerview.setAdapter(sanPhamAdapter);
+        if (manggiohang!=null){
+
+        }else {
+            manggiohang = new ArrayList<>();
+        }
     }
 }

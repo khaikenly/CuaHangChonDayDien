@@ -1,6 +1,7 @@
 package com.example.cuahangchondaydien.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +12,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.cuahangchondaydien.R;
+import com.example.cuahangchondaydien.activity.ChiTietSanPham;
 import com.example.cuahangchondaydien.model.SanPham;
+import com.example.cuahangchondaydien.ultil.checkconnection;
 import com.squareup.picasso.Picasso;
 
 import java.text.DecimalFormat;
@@ -57,7 +60,16 @@ public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.Itemhold
             imghinhsanpham = itemView.findViewById(R.id.imgsanpham);
             txttensanpham = itemView.findViewById(R.id.textviewtensanpham);
             txtgiasanpham = itemView.findViewById(R.id.textviewgiasanpham);
-
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(context, ChiTietSanPham.class);
+                    intent.putExtra("thongtinsanpham",arraysanpham.get(getPosition()));
+                    intent.setFlags(intent.FLAG_ACTIVITY_NEW_TASK);
+                    checkconnection.ShowToast_Short(context,arraysanpham.get(getPosition()).getTensanpham());
+                    context.startActivity(intent);
+                }
+            });
         }
     }
 }
