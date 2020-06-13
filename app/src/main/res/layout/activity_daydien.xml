@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DayDienActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:background="#716562"
+        app:titleTextColor="#f9f6f5"
+        app:title="Dây diện"
+        android:id="@+id/toolbardaydien"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
+    <ListView
+        android:id="@+id/listviewdaydien"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>
