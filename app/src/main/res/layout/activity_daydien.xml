@@ -3,17 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-<<<<<<< HEAD
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.DayDienActivity">
-=======
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".activity.DayDienActivity"
-    android:orientation="vertical">
->>>>>>> origin/master
     <androidx.appcompat.widget.Toolbar
         android:background="#716562"
         app:titleTextColor="#f9f6f5"
