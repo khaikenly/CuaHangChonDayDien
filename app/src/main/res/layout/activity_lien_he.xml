@@ -1,9 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.LienHeActivity">
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarlienhe"
+        android:background="#234961"
+        app:titleTextColor="#FFFFFF"
+        app:title="Liên hệ"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:background="@drawable/backg"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="Liên hệ với tôi"
+            android:textSize="30sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:background="@drawable/boder"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:drawableLeft="@drawable/user"
+                android:gravity="center"
+                android:layout_margin="20dp"
+                android:textSize="20sp"
+                android:text="Họ và tên: Tây đui"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+        <LinearLayout
+            android:background="@drawable/boder"
+            android:layout_margin="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:drawableLeft="@drawable/email"
+                android:gravity="center"
+                android:layout_margin="20dp"
+                android:textSize="20sp"
+                android:text="Email: taydui@gmail.com"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+        <LinearLayout
+            android:background="@drawable/boder"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:drawableLeft="@drawable/phone"
+                android:gravity="center"
+                android:layout_margin="20dp"
+                android:textSize="20sp"
+                android:text="Điện thoại: 09090000"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
